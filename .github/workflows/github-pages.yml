@@ -23,7 +23,7 @@ jobs:
       - run: pip install mkdocs
 
       - name: Build docs site
-        run: mkdocs fosshack-handbook/mkdocs.yml
+        run: mkdocs build fosshack-handbook/mkdocs.yml
 
       - name: Deploy
         run: mkdocs gh-deploy
