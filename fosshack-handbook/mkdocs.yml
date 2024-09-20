@@ -1,0 +1,4 @@
+site_name: FOSS Hack Handbook
+nav:
+  - Home: index.md
+  - Partner Projects: partner-projects.md
