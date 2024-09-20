@@ -24,7 +24,9 @@ jobs:
 
       # The -d (output) path is relative to the -f (source) path
       - name: Build docs site
-        run: mkdocs build -f fosshack-handbook/mkdocs.yml -d ../site
+        run: mkdocs build -f fosshack-handbook/mkdocs.yml
 
       - name: Deploy
-        run: mkdocs gh-deploy
+        run: |
+          cd fosshack-handbook
+          mkdocs gh-deploy
