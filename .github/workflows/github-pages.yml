@@ -22,8 +22,9 @@ jobs:
           python-version: 3.x
       - run: pip install mkdocs
 
+      # The -d (output) path is relative to the -f (source) path
       - name: Build docs site
-        run: mkdocs build fosshack-handbook/mkdocs.yml
+        run: mkdocs build -f fosshack-handbook/mkdocs.yml -d ../site
 
       - name: Deploy
         run: mkdocs gh-deploy
